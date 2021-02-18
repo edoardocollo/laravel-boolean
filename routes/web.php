@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PagesController@home')->name('home');
-Route::get('/about', 'PagesController@about')->name('about');
-Route::get('/blog', 'PagesController@blog')->name('blog');
+Route::get('about', 'PagesController@about')->name('about');
+Route::get('blog', 'PagesController@blog')->name('blog');

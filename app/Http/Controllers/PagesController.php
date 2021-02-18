@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Post;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -14,8 +14,9 @@ class PagesController extends Controller
   {
     return view('about');
   }
-  public function blog()
+  public function blog(Post $post)
   {
-    return view('blog');
+    $posts = $post->all();
+    return view('blog', compact('posts'));
   }
 }
